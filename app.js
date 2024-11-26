@@ -9,28 +9,15 @@ const bodyParser = require('body-parser');
 const studentroute = require('./routes/student');
 const departmentroute = require('./routes/departmentRoute');
 const programmeroute = require('./routes/programmeRoute');
+const auth = require('./routes/authenticate');
 //const programmeroute = require('./controllers/programmeController');
 
 
 const PORT = process.env.PORT || 3011;
 app.use(bodyParser.json());
 
-/*
-app.get('/',(req, res)=>{
-    res.send({
-        "message": "Below is the student data",
-        "data": student
-    });
-});
-app.post('/', (req,res)=>{
-    const data = req.body;
-    res.send({
-        "Message":"Below is the sent data",
-        "data":data
-    })
-});
-*/
 
+app.use('/auth',auth);
 app.use('/department', departmentroute)
 app.use('/students',studentroute);
 app.use('/programme',programmeroute);

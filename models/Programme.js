@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../database/db');
-const Department = require('./Department')
+const Department = require('./Department');
 
-class Programme extends Model{}
+class Programme extends Model{};
 
 Programme.init({
     ProgrammeID: {

@@ -15,7 +15,7 @@ const departmentValidator = {
         }
     },
 
-    DeteOpened: {
+    DateOpened: {
         notEmpty: {
             bail:true,
             errorMessage:'Date Opened not supplied'
