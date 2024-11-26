@@ -1,0 +1,25 @@
+{
+    "cSpell.words": [
+        "Amoah",
+        "foundstudent",
+        "Gikace",
+        "studentdata",
+        "uuidv"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Student_Connection",
+            "database": "studentdb",
+            "username": "root",
+            "password": "P3rf0rm@nc3"
+        }
+    ]
+}
