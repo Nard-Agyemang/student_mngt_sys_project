@@ -2,8 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const webtoken = require('jsonwebtoken');
+const auth = require('../controllers/authController');
 
-router.post('/login', (req,res) => {
+
+
+router.post('/login', auth.login)
+/**
+ * (req,res) => {
     const {email, password} = req.body;
 
     //process db to authenticate here
@@ -12,19 +17,21 @@ router.post('/login', (req,res) => {
         password : password //required key/ the password value is to be used or must replace password
     }
 
-    const token = webtoken.sign(user,process.env.SECRETPASS,{expiresIn:'5m'});
+    const token = webtoken.sign(user,process.env.SECRETPASS,{expiresIn:'1h'});
     res.send({
         "message": "authentication token",
         "token": token
     })
 
 });
+ */
 
+router.post('/logout', auth.logout)
 
-router.post('/logout',(res, req) => {
-
+/**
+ * (res, req) => {
 });
 
-
+*/
 
 module.exports = router;

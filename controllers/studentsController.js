@@ -1,6 +1,5 @@
 const Student = require('../models/Student');
 const Programme = require('../models/Programme');
-const Department = require('../models/Department');
 
 class studentClass{
     getAllStudents = async (req, res) => {

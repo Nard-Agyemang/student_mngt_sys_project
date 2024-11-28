@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../database/db');
-const Student = require('./Programme');
+// const Student = require('./Programme');
 const Programme = require('./Programme');
 
 class Student extends Model{};
 
-Programme.init({
+Student.init({
     StudentID: {
         type: DataTypes.STRING,
         primaryKey: true
@@ -21,6 +21,7 @@ Programme.init({
     }
 },
 
+//Below is an object
 {
     sequelize,
     tableName: 'Student',
@@ -30,5 +31,8 @@ Programme.init({
 
 Student.belongsTo(Programme,{
     foreignKey:'ProgrammeID',
-    as: 'student'
+    as: 'programme'
 });
+
+
+module.exports = Student;
